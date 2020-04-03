@@ -6,8 +6,10 @@ pipeline {
     }
     stages {
         stage('Init') {
-            script {
-                println('String')
+            steps {
+                script {
+                    println('String')
+                }
             }
         }
 
