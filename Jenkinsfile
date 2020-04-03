@@ -1,21 +1,22 @@
+
 pipeline {
-  agent none
-  options {
-      buildDiscarder(logRotator(numToKeepStr: '100'))
-  }
-   stages {
+    agent none
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '100'))
+    }
+    stages {
         stage('Init') {
-           script {
-              println('Init step')
-           }
+            script {
+                println('String')
+            }
         }
-   }
-   
-   stage('Cleanup') {
-      steps {
-          script {
-             println('Cleanup')
-          }
-      }
-   }
+
+        stage('Cleanup') {
+            steps {
+                script {
+                    println('Cleanup')
+                }
+            }
+        }
+    }
 }
